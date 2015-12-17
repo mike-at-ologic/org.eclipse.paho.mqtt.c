@@ -170,7 +170,7 @@ LDFLAGS_AS += -Wl,-install_name,lib${MQTTLIB_AS}.so.${MAJOR_VERSION}
 endif
 
 ${blddir}/%.o : ${srcdir}/%.c
-	$(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
+	$(CC) -c $(CFLAGS) -DOPENSSL $(CPPFLAGS) $< -o $@
 
 all: build
 
